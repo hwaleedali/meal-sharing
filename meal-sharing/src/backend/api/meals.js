@@ -82,20 +82,6 @@ const knex = require("../database");
 //   }
 // });
 
-function getParams(query) {
-  let maxPrice = null;
-  if ("maxPrice" in query && query.length == 1) {
-    if (isNaN(Number(query.maxPrice))) {
-      throw new Error("maxPrice must be a number");
-    } else {
-      maxPrice = Number(query.maxPrice);
-    }
-  }
-  return {
-    maxPrice,
-  };
-}
-
 router.get("/", async (req, res) => {
   const meals = await getMeals(req.query);
   res.json(meals);
