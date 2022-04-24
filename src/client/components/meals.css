@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  background-color: cornsilk;
+}
+
+.headerDesign {
+  background-image: url("https://cookplans.com/wp-content/uploads/2020/12/bealou-blog-header-food-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  margin-bottom: 10px;
+  /* display: flex;
+  flex-direction: row; */
+  padding-left: 80px;
+  height: 200px;
+  color: whitesmoke;
+  justify-content: center;
+}
+li {
+  list-style-type: none;
+}
+.nav-link {
+  background-color: wheat;
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 3px solid green;
+  border-radius: 60%;
+  margin-bottom: 10px;
+}
+.mealsDesign {
+  background-image: url("https://lh3.googleusercontent.com/e4A7yQoVmfOKtjq-JcFU1fAWEjRJAmP1RgM-yy_UmPJLKQVNUsjwcdsGNJ1r6nqnJ5fkKcdbUewV090zPgUHsuL7-ZJbDKMA7mS1U-XMSx_MbxxQdTDhnhfdqs6giPB5tqEF4GDm=w2400");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-item {
+  background-color: wheat;
+  width: 30%;
+  text-align: center;
+  border: 2px solid orange;
+  border-radius: 60%;
+  margin: 0 auto 20px;
+  padding: 20px;
+}
+.homeContact {
+  height: 80vh;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  line-height: 2rem;
+}
+.textHeight {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px;
+  line-height: 2rem;
+}
+.textFormat {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  line-height: 2rem;
+}
+.formDesign {
+  background-color: chartreuse;
+  border: 2px solid orange;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.formContainer {
+  background-color: wheat;
+  border: 2px solid orange;
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  height: 400px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 5px;
+}
+.footer {
+  background-color: wheat;
+  height: 50px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid green;
+}
