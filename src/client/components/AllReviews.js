@@ -21,17 +21,17 @@ function AllReviews({ match }) {
   const mappedReview = reviewState.map((review) => (
     <>
       <section className="menu-item">
-        <p>R-Id: {review.id}</p>
-        <p>Meal Id: {review.meal_id}</p>
-        <p>Rate: {review.title}</p>
-        <p>Desc: {review.description}</p>
+        <p>Review-ID: {review.id}</p>
+        <p>Meal-ID: {review.meal_id}</p>
+        <p>Comments: {review.title}</p>
+        <p>Description: {review.description}</p>
         <p>Stars: {review.stars}</p>
-        <p>Dated: {review.created_date}</p>
+        <p>Dated: {review.created_date.split("T")[0]}</p>
       </section>
     </>
   ));
   return (
-    <div>
+    <div className="backgroundReview">
       <h1 className="textHeight">Review Meals</h1>
       <div className="mealsDesign">{mappedReview}</div>
     </div>

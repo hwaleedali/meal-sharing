@@ -28,7 +28,7 @@ function Review({ match }) {
     </>
   ));
   return (
-    <div>
+    <div className="backGroundMeal">
       <h1 className="textHeight">Review Meals</h1>
       <div className="mealsDesign">{mappedReview}</div>
     </div>

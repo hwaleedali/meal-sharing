@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./meals.css";
+
 function MealDetails({ match }) {
   const [useinput, setUseInput] = useState([]);
   const id = match.params.id;
@@ -15,7 +16,7 @@ function MealDetails({ match }) {
     setUseInput(items);
   };
   return (
-    <div>
+    <div className="backGroundMeal">
       <h1>Meal Details Page</h1>
       {useinput.map((meal) => (
         <>

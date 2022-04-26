@@ -11,7 +11,7 @@ const AddMeal = () => {
   const [maxR, setMaxR] = useState("");
   const [price, setPrice] = useState("");
   const [date, setDate] = useState("");
-
+  const [success, setSuccess] = useState("");
   //to get new meal id
   fetch("http://localhost:3000/api/meals")
     .then((res) => res.json())
@@ -19,14 +19,6 @@ const AddMeal = () => {
       const total = data.length;
       setMealId(total);
     });
-
-  //multiple inputs field handled
-  //   const handleChange = (event) => {
-  //     const name = event.target.name;
-  //     const value = event.target.value;
-  //     setInputs((values) => ({ ...values, [name]: value }));
-  //   };
-
   //handle the submitted form post
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,7 +32,6 @@ const AddMeal = () => {
       price: price,
       created_date: date,
     };
-
     // POST request using fetch to add new meal()
     fetch("http://localhost:3000/api/meals", {
       method: "POST",
@@ -49,26 +40,23 @@ const AddMeal = () => {
       },
       body: JSON.stringify(objToPost),
     })
-      .then((res) => {
-        // alert("success!! " + title + " added");
-        return res.json();
+      .then((response) => {
+        if (response.ok) {
+          setSuccess("Meal has been Added");
+          response.json();
+        } else {
+          alert("Error");
+        }
       })
       .then((data) => {
-        // data ? alert("success!! " + title + " added") : throwError
-        console.log(data);
-        if (data) {
-          alert("success!! " + title + " added");
-        }
+        console.log("Success:", data);
       })
       .catch((error) => {
-        if (error) {
-          alert("Error fetching! Error code: " + error.status);
-        }
-        console.log(error);
+        console.log("Error:", error);
       });
   };
   return (
-    <div>
+    <div className="backGroundSet">
       <h2 style={{ textAlign: "center" }}>Add new meal</h2>
       <div className="formContainer">
         <form onSubmit={handleSubmit}>
@@ -136,6 +124,7 @@ const AddMeal = () => {
             />
           </div>
           <button type="submit">Add new Meal</button>
+          {success}
         </form>
       </div>
     </div>

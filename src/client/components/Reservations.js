@@ -4,6 +4,7 @@ import "./meals.css";
 function Reservations() {
   const [reservationState, setReservationState] = useState([]);
   const [success, setSuccess] = useState("");
+  const [message, setMessage] = useState("");
 
   const [foodId, setFoodId] = useState("");
   const [name, setName] = useState("");
@@ -52,64 +53,77 @@ function Reservations() {
       },
       body: JSON.stringify(data),
     })
-      .then(
-        (response) => response.json()
-        // if (response.ok) {
-        //   alert("Success");
-        //   response.json();
-        // } else {
-        //   alert("Error");
-        // }
-      )
+      .then((response) => {
+        if (response.ok) {
+          setSuccess("Reservation has been Added");
+          response.json();
+        } else {
+          alert("Error");
+        }
+      })
       .then((data) => {
-        setSuccess("Success:", data);
+        console.log("Success:", data);
       })
       .catch((error) => {
-        setSuccess("Error:", error);
+        console.log("Error:", error);
       });
   }
   return (
     <>
-      <div>
+      <div className="backGroundReservations">
         <h1 className="textHeight">Available Reservations</h1>
         <div className="mealsDesign">{mappedReservation}</div>
-      </div>
-      <div className="formContainer">
-        <div>
-          <form onSubmit={addShift}>
-            <div className="inputWrapper">
-              ID:
-              <input
-                type="number"
-                onChange={(e) => setFoodId(Number(e.target.value))}
-              />
-            </div>
-            <div className="inputWrapper">
-              Name:
-              <input type="text" onChange={(e) => setName(e.target.value)} />
-            </div>
-            <div className="inputWrapper">
-              Phone#:
-              <input
-                type="number"
-                onChange={(e) => setPhone(Number(e.target.value))}
-              />
-            </div>
-            <div className="inputWrapper">
-              Email:
-              <input type="email" onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div className="inputWrapper">
-              No. of Guests:
-              <input
-                type="number"
-                onChange={(e) => setGuest(Number(e.target.value))}
-              />
-            </div>
-            <div>
-              <button type="submit">Book Seat</button>
-            </div>
-          </form>
+
+        <div className="formContainer">
+          <div>
+            <form onSubmit={addShift}>
+              <div className="inputWrapper">
+                ID:
+                <input
+                  type="number"
+                  placeholder="Add Meal by ID"
+                  onChange={(e) => setFoodId(Number(e.target.value))}
+                />
+              </div>
+              <div className="inputWrapper">
+                Name:
+                <input
+                  type="text"
+                  placeholder="Name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="inputWrapper">
+                Phone#:
+                <input
+                  type="number"
+                  placeholder="Phone Number"
+                  onChange={(e) => setPhone(Number(e.target.value))}
+                />
+              </div>
+              <div className="inputWrapper">
+                Email:
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="inputWrapper">
+                No. of Guests:
+                <input
+                  type="number"
+                  placeholder="Guests Number"
+                  onChange={(e) => setGuest(Number(e.target.value))}
+                />
+              </div>
+              <div>
+                <button type="submit">Book Seat</button>
+                {success}
+                {message}
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </>

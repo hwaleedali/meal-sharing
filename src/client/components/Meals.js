@@ -4,11 +4,9 @@ import "./meals.css";
 
 function Meals() {
   const [useTodo, setUseTodo] = useState([]);
-
   useEffect(() => {
     fetchItems();
   }, []);
-
   const fetchItems = async () => {
     const data = await fetch("http://localhost:3000/api/meals");
     const items = await data.json();
@@ -20,15 +18,28 @@ function Meals() {
       <section className="menu-item">
         <h2>{item.title}</h2>
         <p>{item.description}</p>
-        <Link to={`/meal-details/${item.id}`}>
-          <p>Detail</p>
-        </Link>
-        <Link to={`/reviews/${item.id}`}>
-          <p>Reviews</p>
-        </Link>
+        <div className="buttonDesign">
+          {" "}
+          <Link to={`/meal-details/${item.id}`}>
+            <ul>
+              <li>Detail</li>
+            </ul>
+          </Link>
+        </div>
+        <div className="buttonDesign">
+          <Link to={`/reviews/${item.id}`}>
+            <ul>
+              <li>Reviews</li>
+            </ul>{" "}
+          </Link>
+        </div>
       </section>
     );
   });
-  return <div className="mealsDesign">{singleTitle}</div>;
+  return (
+    <div className="backGroundMeal">
+      <div className="mealsDesign">{singleTitle}</div>
+    </div>
+  );
 }
 export default Meals;

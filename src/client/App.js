@@ -28,7 +28,6 @@ function App() {
           <Route exact path="/review" component={AllReviews} />
           <Route exact path="/reservation" component={Reservations} />
           <Route exact path="/contact" component={Contact} />
-
           <Route exact path="/test-component">
             <TestComponent></TestComponent>
           </Route>
@@ -40,7 +39,7 @@ function App() {
 }
 const Home = () => {
   return (
-    <div className="homeContact">
+    <div className="homePage">
       <p>
         This the Home Page of Meal App Where You Can Find and Order Your Food As
         Per Your Requirments and Allergies.
@@ -48,5 +47,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default App;
