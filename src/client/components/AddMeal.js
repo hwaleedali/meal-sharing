@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { throwError } from "rxjs";
 import "./meals.css";
 const AddMeal = () => {
   // controlled inputs

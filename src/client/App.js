@@ -12,6 +12,7 @@ import AllReviews from "./components/AllReviews";
 import Reservations from "./components/Reservations";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { DeleteMeal } from "./components/DeleteMeal";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
           <Route exact path="/review" component={AllReviews} />
           <Route exact path="/reservation" component={Reservations} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/deletemeal/:id" component={DeleteMeal} />
+
           <Route exact path="/test-component">
             <TestComponent></TestComponent>
           </Route>

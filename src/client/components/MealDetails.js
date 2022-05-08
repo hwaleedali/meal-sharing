@@ -26,6 +26,9 @@ function MealDetails({ match }) {
               <p>{meal.description}</p>
               <p>{meal.price}</p>
             </Link>
+            <Link exact to={`/deletemeal/${meal.id}`}>
+              <button> Delete Meal</button>
+            </Link>
           </section>
         </>
       ))}
