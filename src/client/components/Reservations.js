@@ -37,7 +37,7 @@ function Reservations() {
   console.log(mappedReservation);
   function addShift(e) {
     e.preventDefault();
-    const data = {
+    const dataRes = {
       meal_id: Number(foodId),
       contact_name: name,
       contact_phonenumber: Number(phone),
@@ -45,13 +45,13 @@ function Reservations() {
       number_of_guests: Number(guest),
       created_date: "2022-04-03",
     };
-    console.log(data);
-    fetch("http://localhost:3000/api/reservations", {
+    console.log(dataRes);
+    fetch("/api/reservations", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(dataRes),
     })
       .then((response) => {
         if (response.ok) {
@@ -62,7 +62,7 @@ function Reservations() {
         }
       })
       .then((data) => {
-        console.log("Success:", data);
+        console.log("Success:", dataRes);
       })
       .catch((error) => {
         console.log("Error:", error);
