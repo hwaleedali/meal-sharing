@@ -46,7 +46,7 @@ function Reservations() {
       created_date: "2022-04-03",
     };
     console.log(dataRes);
-    fetch("/api/reservations", {
+    fetch("http://localhost:3000/api/reservations", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
