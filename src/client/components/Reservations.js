@@ -15,9 +15,7 @@ function Reservations() {
     fetchReservation();
   }, []);
   const fetchReservation = async () => {
-    const data = await fetch(
-      "http://localhost:3000/api/meals?availableReservations"
-    );
+    const data = await fetch("/api/meals?availableReservations");
     const items = await data.json();
     console.log(items);
     setReservationState(items);
@@ -46,7 +44,7 @@ function Reservations() {
       created_date: "2022-04-03",
     };
     console.log(data);
-    fetch("http://localhost:3000/api/reservations", {
+    fetch("/api/reservations", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

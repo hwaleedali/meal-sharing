@@ -10,7 +10,7 @@ function MealDetails({ match }) {
     fetchItems();
   }, []);
   const fetchItems = async () => {
-    const data = await fetch(`http://localhost:3000/api/meals/${id}`);
+    const data = await fetch(`/api/meals/${id}`);
     const items = await data.json();
     console.log(items);
     setUseInput(items);

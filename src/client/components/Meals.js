@@ -8,7 +8,7 @@ function Meals() {
     fetchItems();
   }, []);
   const fetchItems = async () => {
-    const data = await fetch("http://localhost:3000/api/meals");
+    const data = await fetch("/api/meals");
     const items = await data.json();
     console.log(items);
     setUseTodo(items);
