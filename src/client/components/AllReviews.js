@@ -10,7 +10,7 @@ function AllReviews({ match }) {
   }, []);
 
   const fetchReviews = async () => {
-    const data = await fetch("/api/reviews");
+    const data = await fetch("http://localhost:3000/api/reviews");
     const items = await data.json();
     console.log(items);
     setReviewState(items);

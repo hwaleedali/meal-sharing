@@ -32,7 +32,7 @@ const AddMeal = () => {
       created_date: date,
     };
     // POST request using fetch to add new meal()
-    fetch("http://localhost:3000/api/meals", {
+    fetch("/api/meals", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
