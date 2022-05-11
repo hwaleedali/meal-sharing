@@ -10,7 +10,7 @@ const AddMeal = () => {
   const [maxR, setMaxR] = useState("");
   const [price, setPrice] = useState("");
   const [date, setDate] = useState("");
-  const [success, setSuccess] = useState("");
+  const [successmeal, setSuccessMeal] = useState("");
   //to get new meal id
   fetch("api/meals")
     .then((res) => res.json())
@@ -41,7 +41,7 @@ const AddMeal = () => {
     })
       .then((response) => {
         if (response.ok) {
-          setSuccess("Meal has been Added");
+          setSuccessMeal("Meal has been Added");
           response.json();
         } else {
           alert("Error");

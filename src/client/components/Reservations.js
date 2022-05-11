@@ -17,7 +17,6 @@ function Reservations() {
   const fetchReservation = async () => {
     const data = await fetch("/api/meals?availableReservations");
     const items = await data.json();
-    console.log(items);
     setReservationState(items);
   };
   console.log(reservationState);
@@ -32,10 +31,9 @@ function Reservations() {
       </section>
     </>
   ));
-  console.log(mappedReservation);
   function addShift(e) {
     e.preventDefault();
-    const dataRes = {
+    const data = {
       meal_id: Number(foodId),
       contact_name: name,
       contact_phonenumber: Number(phone),
@@ -43,13 +41,12 @@ function Reservations() {
       number_of_guests: Number(guest),
       created_date: "2022-04-03",
     };
-    console.log(dataRes);
     fetch("/api/reservations", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(dataRes),
+      body: JSON.stringify(data),
     })
       .then((response) => {
         if (response.ok) {
@@ -59,8 +56,8 @@ function Reservations() {
           alert("Error");
         }
       })
-      .then((dataRes) => {
-        console.log("Success:", dataRes);
+      .then((data) => {
+        console.log("Success:", data);
       })
       .catch((error) => {
         console.log("Error:", error);

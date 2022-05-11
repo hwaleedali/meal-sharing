@@ -10,6 +10,7 @@ import AddMeal from "./components/AddMeal";
 import Review from "./components/Review";
 import AllReviews from "./components/AllReviews";
 import Reservations from "./components/Reservations";
+import AllReservations from "./components/AllReservations";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { DeleteMeal } from "./components/DeleteMeal";
@@ -28,6 +29,10 @@ function App() {
           <Route exact path="/reviews/:id" component={Review} />
           <Route exact path="/review" component={AllReviews} />
           <Route exact path="/reservation" component={Reservations} />
+          <Route exact path="/allreservation" component={AllReservations} />
+
+          <Route exact path="/deletemeal/:id" component={DeleteMeal} />
+
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/deletemeal/:id" component={DeleteMeal} />
 

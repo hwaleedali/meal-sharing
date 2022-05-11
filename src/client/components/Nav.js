@@ -25,7 +25,10 @@ function Nav() {
         </Link>
 
         <Link to={"/reservation"}>
-          <li>Reservations</li>
+          <li>Available Reservations</li>
+        </Link>
+        <Link to={"/allreservation"}>
+          <li>All Reservations</li>
         </Link>
 
         <Link to={"/review"}>
