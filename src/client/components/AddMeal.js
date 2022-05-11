@@ -123,7 +123,7 @@ const AddMeal = () => {
             />
           </div>
           <button type="submit">Add new Meal</button>
-          {success}
+          {successmeal}
         </form>
       </div>
     </div>

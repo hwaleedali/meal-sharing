@@ -22,7 +22,6 @@ function AllReservations() {
       <p>Email: {reservation.contact_email}</p>
     </div>
   ));
-
   return (
     <div>
       <h1 className="textHeight">All Reservations</h1>

@@ -76,7 +76,7 @@ function Reservations() {
                 ID:
                 <input
                   type="number"
-                  placeholder="Add Meal by ID"
+                  placeholder="Add Reservation by ID"
                   onChange={(e) => setFoodId(Number(e.target.value))}
                 />
               </div>
