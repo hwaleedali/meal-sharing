@@ -25,7 +25,7 @@ function Nav() {
         </Link>
 
         <Link to={"/reservation"}>
-          <li>Available Reservations</li>
+          <li>Book Reservations</li>
         </Link>
         <Link to={"/allreservation"}>
           <li>All Reservations</li>
