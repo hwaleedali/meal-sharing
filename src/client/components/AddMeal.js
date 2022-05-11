@@ -12,7 +12,7 @@ const AddMeal = () => {
   const [date, setDate] = useState("");
   const [success, setSuccess] = useState("");
   //to get new meal id
-  fetch("http://localhost:3000/api/meals")
+  fetch("api/meals")
     .then((res) => res.json())
     .then((data) => {
       const total = data.length;
@@ -32,7 +32,7 @@ const AddMeal = () => {
       created_date: date,
     };
     // POST request using fetch to add new meal()
-    fetch("/api/meals", {
+    fetch("api/meals", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
