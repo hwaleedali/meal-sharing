@@ -1,0 +1,186 @@
+body {
+  width: 100%;
+}
+.headerDesign {
+  background-image: url("https://cookplans.com/wp-content/uploads/2020/12/bealou-blog-header-food-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 80px;
+  height: 200px;
+  color: whitesmoke;
+  justify-content: center;
+}
+li {
+  list-style-type: none;
+}
+.nav-link {
+  background-color: wheat;
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 3px solid green;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+.nav-link li:hover {
+  text-decoration: underline;
+  background-color: white;
+}
+.mealsDesign {
+  color: blueviolet;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.backGroundMeal {
+  background-color: wheat;
+  border: 2px solid green;
+  border-radius: 1%;
+  margin: 0 auto;
+  width: 90%;
+
+  padding-top: 10px;
+}
+.menu-item {
+  width: 30%;
+  text-align: center;
+  border: 2px solid green;
+  border-radius: 10%;
+  margin: 0 auto 10px;
+  padding: 20px 10px 10px 10px;
+}
+.homeContact {
+  height: 80vh;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.textHeight {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px;
+  line-height: 2rem;
+}
+.textFormat {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  line-height: 2rem;
+}
+.formContainer {
+  border: 2px solid green;
+  width: 30%;
+  color: blueviolet;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  height: 500px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 5px;
+}
+.buttonDesign li:hover {
+  text-decoration: underline;
+}
+.footer {
+  background-color: wheat;
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 3px solid green;
+  border-radius: 10%;
+}
+img {
+  width: 90%;
+  height: 50%;
+  padding-top: 100px;
+}
+.backGroundSet {
+  background-image: url("https://i.guim.co.uk/img/media/b2694502e57932249586ffbe57f8f2be1ec7d41a/0_136_5687_3413/master/5687.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=82b138115c4abe48d6609876824414de");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 90%;
+  margin: 0 auto;
+}
+.backgroundReview {
+  background-image: url("https://villageofmontfort.com/wp-content/uploads/2020/05/47745.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  width: 90%;
+}
+.backGroundReservations {
+  background-image: url("https://cache.careers360.mobi/media/article_images/2021/2/23/JMI-B-Tech-reservation-criteria-2021.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  width: 90%;
+}
+.menu-item-reservation {
+  width: 30%;
+  text-align: center;
+  border: 2px solid orange;
+  border-radius: 10%;
+  margin: 0 auto 20px;
+  padding: 20px;
+  color: blue;
+}
+.homePage {
+  background-image: url("https://www.gannett-cdn.com/presto/2018/11/14/PLAL/c5808fbe-dbf4-453d-b4eb-e64b949d6b47-UberEats_Photo_Italian_Assortment_TopView-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.deleteButton {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0 auto 20px;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+/* @media screen and (max-width: 750px) {
+  .homePage {
+    padding-left: 40px;
+    padding-right: 0;
+  }
+  .nav-link {
+    flex-direction: column;
+    align-items: center;
+  }
+} */
